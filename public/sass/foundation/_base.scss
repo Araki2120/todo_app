@@ -2,7 +2,7 @@ html {
     font-size: 100%;
     font-family: 'Hiragino Sans', sans-serif;
     line-height: 1.7;
-    letter-spacing: 1px;
+    letter-spacing: .1em;
 }
 
 body {
@@ -38,4 +38,19 @@ img {
 input {
     font-family: inherit;
     font-size: 100%;
+}
+
+h1 {
+    display: flex;
+
+    &:after {
+        content: '';
+        position: relative;
+        left: 2%;
+        display: block;
+        width: 24px;
+        height: 21px;
+        background: url(../../images/cat_paw.svg) center center / cover;
+        transform: rotate(16deg);
+    }
 }

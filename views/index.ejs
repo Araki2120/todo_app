@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <p class="header__logo"><a href="/" class="header__link">List App</a></p>
+    </header>
+
+    <main class="main">
+        <div class="index">
+            <div class="index__head">
+                <h1 class="index__ttl">やることリスト</h1>
+                <p class="index__btn"><a href="/new" class="index__more">+ 新規作成</a></p>
+            </div>
+            <div class="index__wrapper">
+                <div class="index__table-head">
+                    <span class="index__id">ID</span>
+                    <span class="index__sub">やること</span>
+                </div>
+
+                <ul class="index__body">
+                    <% todos.forEach((todo)=> {%>
+
+                        <li class="index__list">
+                            <div class="index__data">
+                                <span class="index__id">
+                                    <%= todo.id%>
+                                </span>
+                                <span class="index__name">
+                                    <%= todo.name%>
+                                </span>
+                            </div>
+                            <div class="index__menu">
+                                <form action="/delete/<%=todo.id%>" method="post">
+                                    <input type="submit" value="削除">
+                                </form>
+                                <p class="index__edit"><a href="/edit/<%=todo.id%>" class="index__link">編集</a></p>
+                            </div>
+                        </li>
+
+                        <% });%>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

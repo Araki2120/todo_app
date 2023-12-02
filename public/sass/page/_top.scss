@@ -1,0 +1,283 @@
+// color
+$orange: #fc4a1a;
+$yellow: #f7b733;
+$green: #4abdac;
+$gray: #6c7686;
+$l-gray: #8491a5;
+
+// todo本体のスタイル
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    min-width: 920px;
+    margin: 0 auto;
+    padding: 60px;
+
+    &__detail {
+        width: max(36%, 320px);
+        margin-top: -40px;
+    }
+
+    &__sub {
+        margin-bottom: 24px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    &__ttl {
+        margin-bottom: 24px;
+        font-size: 54px;
+        letter-spacing: 2px;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.5em;
+        margin-bottom: 40px;
+    }
+
+    &__indexBtn {
+        width: 184px;
+        height: 48px;
+    }
+
+    &__more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        color: $orange;
+        border: 2px solid $orange;
+        font-weight: 600;
+    }
+
+    &__more:hover {
+        background: $orange;
+        color: #fff;
+    }
+
+    &__pic {
+        width: 56%;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 88%;
+    }
+}
+
+
+.header {
+    height: 56px;
+    background: #fff;
+    border-bottom: 1px solid #f0f4f9;
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__link {
+        padding-left: 56px;
+        color: #6c7586;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 56px;
+    }
+
+    &__link:hover {
+        color: $orange;
+    }
+}
+
+//一覧ページ
+.index {
+    width: 80%;
+    max-width: 720px;
+    min-width: 360px;
+    margin: 0 auto;
+    margin-top: 56px;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    &__ttl {
+        font-size: 24px;
+    }
+
+    &__btn {
+        width: 120px;
+        height: 45px;
+        line-height: 43px;
+    }
+
+    &__more {
+        background: $yellow;
+        color: #ffffff;
+        border: 2px solid $yellow;
+        border-radius: 30px;
+        font-size: 14px;
+        text-align: center;
+
+        &:hover {
+            background-color: #ffffff;
+            color: $yellow;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__table-head {
+        display: flex;
+        height: 44px;
+        background-color: #b7cadc;
+        border-radius: 2px 2px 0 0;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 46px;
+    }
+
+    &__id {
+        display: inline-block;
+        width: 72px;
+        text-align: center;
+    }
+
+    //一覧テーブル部分
+    &__body {
+        background: #fff;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        height: 72px;
+        border: 1px solid #f0f4f9;
+        border-top: none;
+        line-height: 74px;
+    }
+
+    &__data {
+        width: 70%;
+    }
+
+    &__neme {
+        display: block;
+        color: #8491a5;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        padding: 0 5%;
+    }
+
+    form input {
+        padding: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        background: transparent;
+        color: #bac6d3;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    form input:hover {
+        color: $orange;
+        transition: .4s;
+    }
+
+    &__edit {
+        height: 50%;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $l-gray;
+        font-size: 16px;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+//新規追加・更新ページ
+.itemForm {
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #f0f4f9;
+    border-radius: 0px 0px 2px 2px;
+
+    &__label {
+        color: #8491a5;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        height: 40px;
+        margin-top: 8px;
+        padding: 12px 16px;
+        background-color: #fcfcfd;
+        border: 1px solid #bac6d3;
+        border-radius: 2px;
+        color: #2b546a;
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 120px;
+        height: 45px;
+        margin-top: 24px;
+        margin-left: auto;
+        font-size: 14px;
+        background-color: $yellow;
+        color: #ffffff;
+        border: 2px solid $yellow;
+        border-radius: 30px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #ffffff;
+        color: $yellow;
+        transition: .4s;
+    }
+
+    &__btn {
+        display: inline-block;
+        margin-top: 16px;
+        margin-left: 2px;
+    }
+
+    &__more {
+        color: #bac6d3;
+        font-weight: 600;
+        text-decoration: underline;
+
+        &:hover {
+            color: #80bcff;
+        }
+    }
+}

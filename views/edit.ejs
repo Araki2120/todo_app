@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <p class="header__logo"><a href="/" class="header___link">List App</a></p>
+    </header>
+
+    <main class="main">
+        <div class="index">
+            <div class="index__head">
+                <h1 class="index__ttl">やることリストの編集</h1>
+            </div>
+            <div class="itemForm">
+                <div class="itemForm__table-head">
+                    <p class="itemForm__label">やること</p>
+                    <form action="/update/<%= todo.id %>" method="post">
+                        <input name="todoName" type="text" value="<%= todo.name %>">
+                        <input type="submit" value="更新する">
+                    </form>
+                </div>
+                <p class="itemForm__btn"><a href="/index" class="itemForm__more">もどる</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
